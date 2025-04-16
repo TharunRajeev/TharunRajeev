@@ -1,4 +1,4 @@
-name: Generate Snake Game
+name: Generate Snake SVG
 
 on:
   schedule:
@@ -15,17 +15,16 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v3
 
-      - name: Generate Snake Animation
-        uses: Platane/snk@v3
+      - name: Generate SVG Snake Animation
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-            dist/github-snake.gif?color_snake=#ff8700&color_dots=#d6e685,#8cc665,#44a340,#1e6823,#0c4200
 
       - name: Push to GitHub
         uses: EndBug/add-and-commit@v9
         with:
-          message: "Generate GitHub snake animation"
+          message: "Update snake contribution graph SVG"
           add: 'dist/*'
