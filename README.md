@@ -15,6 +15,15 @@ I'm a lifelong learner who believes that knowledge has no limits. To me, any con
 ![](https://github-readme-streak-stats.herokuapp.com/?user=TharunRajeev&theme=chartreuse-dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=TharunRajeev&theme=chartreuse-dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
+### 🐍 Contribution Snake
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
+  <img alt="github-snake" src="dist/github-snake.svg" />
+</picture>
+
+
 [![](https://visitcount.itsvg.in/api?id=TharunRajeev&label=GithubProfile%20Views&color=2&icon=0&pretty=true)](https://visitcount.itsvg.in)
 
 
