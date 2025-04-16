@@ -1,0 +1,31 @@
+name: Generate Snake Game
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # every day at midnight UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.gif?color_snake=#ff8700&color_dots=#d6e685,#8cc665,#44a340,#1e6823,#0c4200
+
+      - name: Push to GitHub
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Generate GitHub snake animation"
+          add: 'dist/*'
